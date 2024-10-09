@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier le message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 font-sans text-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-zinc-900 ring-1 ring-zinc-950/5 p-6 rounded-lg shadow-lg mb-8">
+        <h1 class="text-2xl font-bold mb-4">Modifier le message</h1>
+        
+        <form action="./edit_message.php" method="POST">
+            <input type="hidden" name="id" value="{{ message.id }}">
+            <textarea name="message" rows="4" class="w-full p-2 rounded text-black" placeholder="Modifier votre message ici..." required>{{ message.message }}</textarea>
+            <button type="submit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Sauvegarder</button>
+        </form>
+
+        <a href="./home.php" class="mt-10 flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Retour à l'accueil</a>
+    </div>
+</body>
+</html>
